@@ -17,9 +17,10 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}/sql:/flyway/sql \
             flyway/flyway:latest \
-            -url=${{ secrets.DB_URL }} \
-            -user=${{ secrets.DB_USER }} \
-            -password=${{ secrets.DB_PASSWORD }} \
+            -url="jdbc:postgresql://ep-cold-sun-amjgpd78.c-5.us-east-1.aws.neon.tech:5432/neondb" \
+            -user="${{ secrets.DB_USER }}" \
+            -password="${{ secrets.DB_PASSWORD }}" \
+            -schemas=public \
+            -ssl=true \
             -connectRetries=10 \
-            -baselineOnMigrate=true \
             migrate
