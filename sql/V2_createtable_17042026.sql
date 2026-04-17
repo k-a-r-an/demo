@@ -1,0 +1,1 @@
+create table karan(id int);
