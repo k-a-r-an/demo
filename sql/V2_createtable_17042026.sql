@@ -1,1 +1,1 @@
-create table public.karan(id int);
+create table public.karan(id int,name varchar(20));
