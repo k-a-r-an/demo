@@ -1,1 +1,1 @@
-create table karan(id int);
+create table public.karan(id int);
