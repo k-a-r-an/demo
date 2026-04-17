@@ -21,4 +21,5 @@ jobs:
             -user=${{ secrets.DB_USER }} \
             -password=${{ secrets.DB_PASSWORD }} \
             -connectRetries=10 \
+            -baselineOnMigrate=true \
             migrate
