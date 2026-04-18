@@ -1,6 +1,6 @@
 create sequence customerdata.tbl_patient_sequence
 start with 1
-incrememt by 1;
+increment by 1;
 
 -------------------------------
 
