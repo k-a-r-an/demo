@@ -1,0 +1,15 @@
+create sequence customerdata.tbl_patient_sequence
+start with 1
+incrememt by 1;
+
+-------------------------------
+
+SELECT setval(
+    'customerdata.tbl_patient_seq',
+    (SELECT MAX(patient_id) FROM customerdata.tbl_patient)
+);
+
+-------------------------------
+ALTER TABLE customerdata.tbl_patient
+ALTER COLUMN patient_id
+SET DEFAULT nextval('customerdata.tbl_patient_seq');
