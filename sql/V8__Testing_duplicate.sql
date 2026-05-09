@@ -1,0 +1,1 @@
+create table tbl_patient_reg_status();
